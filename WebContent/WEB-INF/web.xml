@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+	<display-name>JspServlet</display-name>
+
+	<servlet>
+		<servlet-name>SimpleJspServletExample</servlet-name>
+		<servlet-class>com.jspservlet.SimpleJspServletExample</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SimpleJspServletExample</servlet-name>
+		<url-pattern>/SimpleJspServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>XmlServlet</servlet-name>
+		<servlet-class>com.jspservlet.XmlServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>XmlServlet</servlet-name>
+		<url-pattern>/XmlServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SessionRequest</servlet-name>
+		<servlet-class>com.session.request.SessionRequest</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SessionRequest</servlet-name>
+		<url-pattern>/SessionRequestPath</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>InitConfig</servlet-name>
+		<servlet-class>com.initconfig.InitConfig</servlet-class>
+		<init-param>
+			<param-name>defaultUser</param-name>
+			<param-value>keshav koli</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InitConfig</servlet-name>
+		<url-pattern>/InitConfigPath</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>InitPageJSP</servlet-name>
+		<jsp-file>/initpage.jsp</jsp-file>
+		<init-param>
+			<param-name>defaultUser</param-name>
+			<param-value>keshav koli</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InitPageJSP</servlet-name>
+		<url-pattern>/initpage.jsp</url-pattern>
+	</servlet-mapping>
+
+
+
+</web-app>
